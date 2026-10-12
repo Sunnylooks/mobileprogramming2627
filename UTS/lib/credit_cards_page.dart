@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class CreditCardsPage extends StatelessWidget {
   
   // TODO 1: GANTI VARIABEL INI DENGAN DATA DIRI ANDA
-  final String namaMahasiswa = "NAMA LENGKAP ANDA"; // Jangan biarkan kosong!
-  final String nimMahasiswa = "NIM ANDA"; // Jangan biarkan kosong!
+  final String namaMahasiswa = "Jeremy Lawrence"; // Jangan biarkan kosong!
+  final String nimMahasiswa = "20245520007"; // Jangan biarkan kosong!
 
   @override
   Widget build(BuildContext context) {
@@ -67,14 +67,23 @@ class CreditCardsPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         // KODE UI ANDA DI SINI
+        Text(
+                    'Rincian Pembayaran',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+        Text(
+                    'Bagaimana Anda ingin membayar?',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                  ),
+
         // padding 1 
         Padding(
-            padding: const EdgeInsets.only(),
+            padding: const EdgeInsets.all(8.0),
 
         ),
         // padding 2
         Padding(
-            padding: const EdgeInsets.only(),
+            padding: const EdgeInsets.all(8.0),
 
         ),
       ],
@@ -116,5 +125,14 @@ class CreditCardsPage extends StatelessWidget {
   // buat Column berisi kontainer dan Informasi
 
   // buat   FloatingActionButton
-  
+  FloatingActionButton _buildAddCardButton({required Icon icon, required Color color}) {
+    return FloatingActionButton(
+      onPressed: () {
+        // Tambahkan logika untuk menambahkan kartu baru di sini
+      },
+      child: icon,
+      backgroundColor: color,
+    );
+  }
   // Build Column
+  }
