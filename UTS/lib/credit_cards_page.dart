@@ -64,16 +64,18 @@ class CreditCardsPage extends StatelessWidget {
     // TODO 3: Implementasikan UI untuk judul dan sub-judul di sini.
     // Terapkan TextStyle dengan font yang sesuai panduan.
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         // KODE UI ANDA DI SINI
         Text(
                     'Rincian Pembayaran',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
                   ),
         Text(
                     'Bagaimana Anda ingin membayar?',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
+                    textAlign: TextAlign.center,
                   ),
 
         // padding 1 
