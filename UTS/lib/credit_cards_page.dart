@@ -165,7 +165,7 @@ class CreditCardsPage extends StatelessWidget {
               children: [
                 _buildDetailsBlock(cardHolder, cardExpiration),
               ],
-            ),
+            ), 
           ],
         ),
       ),
@@ -202,15 +202,20 @@ class CreditCardsPage extends StatelessWidget {
   // buat Column berisi kontainer dan Informasi
 
   // buat   FloatingActionButton
-  FloatingActionButton _buildAddCardButton({required Icon icon, required Color color}) {
-    
-    return FloatingActionButton(
+  Widget _buildAddCardButton({required Icon icon, required Color color}) {
+    return Center(
+      child: Container(
+        width: 80,
+        height: 80,
+        child: FloatingActionButton(
 
-      onPressed: () {
-      
-      },
-      child: icon,
-      backgroundColor: color,
+        onPressed: () {
+        
+        },
+        child: icon,
+        backgroundColor: color,
+      ),
+    ),
     );
   }
   // Build Column
