@@ -45,6 +45,7 @@ flutter:
   fonts:
     - family: CourrierPrime
       fonts:
+      - asset: assets/fonts/CourrierPrime-Regular.ttf
   # 3. masukan asset regular.ttf 
 
     - family: Lato
