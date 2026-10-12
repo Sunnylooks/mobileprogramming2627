@@ -158,7 +158,7 @@ class CreditCardsPage extends StatelessWidget {
             _buildLogosBlock(),
             Text(
               cardNumber,
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: TextStyle(fontSize: 22, color: Colors.white),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
