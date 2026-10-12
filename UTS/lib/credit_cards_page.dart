@@ -181,6 +181,17 @@ class CreditCardsPage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
+        Image.asset(
+          'assets/images/contact_less.png',
+          width: 40, // Atur lebar sesuai kebutuhan
+          height: 40, // Atur tinggi sesuai kebutuhan
+        ),
+        SizedBox(width: 100), // Spacing between the two images
+        Image.asset(
+          'assets/images/mastercard.png',
+          width: 40, // Atur lebar sesuai kebutuhan
+          height: 40, // Atur tinggi sesuai kebutuhan
+        ),
         // KODE GAMBAR ANDA DI SINI
       ],
     );
@@ -189,9 +200,11 @@ class CreditCardsPage extends StatelessWidget {
 
   // buat   FloatingActionButton
   FloatingActionButton _buildAddCardButton({required Icon icon, required Color color}) {
+    
     return FloatingActionButton(
+
       onPressed: () {
-        // Tambahkan logika untuk menambahkan kartu baru di sini
+      
       },
       child: icon,
       backgroundColor: color,
