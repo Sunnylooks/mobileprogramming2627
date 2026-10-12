@@ -179,20 +179,23 @@ class CreditCardsPage extends StatelessWidget {
     // AI teks tidak tahu dimensi resolusi asli gambar ini. Anda harus mengatur nilai width dan height 
     // secara manual agar gambar tidak pecah atau overflow (terpotong).
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,      
       children: <Widget>[
+                
+        // KODE GAMBAR ANDA DI SINI
+        SizedBox(width: 1),
         Image.asset(
           'assets/images/contact_less.png',
-          width: 40, // Atur lebar sesuai kebutuhan
-          height: 40, // Atur tinggi sesuai kebutuhan
+          width: 30, 
+          height: 30, 
         ),
-        SizedBox(width: 100), // Spacing between the two images
+        SizedBox(width: 180), 
         Image.asset(
           'assets/images/mastercard.png',
-          width: 40, // Atur lebar sesuai kebutuhan
-          height: 40, // Atur tinggi sesuai kebutuhan
+          width: 50, 
+          height: 50, 
         ),
-        // KODE GAMBAR ANDA DI SINI
+        SizedBox(width: 1), 
       ],
     );
   }
