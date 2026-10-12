@@ -16,7 +16,7 @@ class CreditCardsPage extends StatelessWidget {
     // (Silakan tulis kode logika if-else Anda di sini sebelum return)
     Color warnaKartu1 = Color(0xFF090943); // <- Ubah agar dinamis menggunakan logika IF
     Color warnaKartu2 = Color(0xFF000000); // <- Ubah agar dinamis menggunakan logika IF
-    
+
     if (int.parse(nimMahasiswa[nimMahasiswa.length - 1]) % 2 == 0) {
       // Digit terakhir NIM genap
       warnaKartu1 = Color(0xFF000000); // Hitam
@@ -78,12 +78,13 @@ class CreditCardsPage extends StatelessWidget {
       children: <Widget>[
         // KODE UI ANDA DI SINI
         Text(
-                    'Rincian Pembayaran',
+                    '$title',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
+                    
                   ),
         Text(
-                    'Bagaimana Anda ingin membayar?',
+                    '$subTitle',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
                     textAlign: TextAlign.center,
                   ),
@@ -97,6 +98,41 @@ class CreditCardsPage extends StatelessWidget {
         Padding(
             padding: const EdgeInsets.all(8.0),
 
+        ),
+      ],
+    );
+  }
+
+  
+  Row _buildDetailsBlock(String cardholder ,String cardExpiration) {
+    return Row(
+      children: <Widget>[
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'CARDHOLDER',
+              style: TextStyle(fontSize: 12, color: Colors.white),
+            ),
+            Text(
+              '$cardholder',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+          ],
+        ),
+        SizedBox(width: 100), // Spacing between the two columns
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'VALID THRU',
+              style: TextStyle(fontSize: 12, color: Colors.white),
+            ),
+            Text(
+              '$cardExpiration',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+          ],
         ),
       ],
     );
@@ -116,7 +152,22 @@ class CreditCardsPage extends StatelessWidget {
       child: Container(
         height: 200,
         // KODE UI ANDA DI SINI
-        child: const Center(child: Text("UI Kartu belum dibuat...")),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _buildLogosBlock(),
+            Text(
+              cardNumber,
+              style: TextStyle(fontSize: 20, color: Colors.white),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildDetailsBlock(cardHolder, cardExpiration),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
