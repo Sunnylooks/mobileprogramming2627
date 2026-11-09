@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'layarkeduapisah.dart';
+import 'json.dart';
 
 class LayarKedua extends StatelessWidget {
   @override
@@ -66,6 +67,20 @@ class MyHome extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) {
                       return LayarKeduaPisah(pesan: "halloo ini pesan dari screen 1",);
+                    },
+                  ),
+                );
+              },
+             
+            ),
+            SizedBox(height: 20,),
+            ElevatedButton(
+              child: const Text('Ke Screen ketiga untuk test api'),
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const JsonCatScreen();
                     },
                   ),
                 );

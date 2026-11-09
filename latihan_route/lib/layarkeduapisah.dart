@@ -7,12 +7,15 @@ class LayarKeduaPisah extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ini Screen 2 pisah')),
-      body: Center(
-        child: ElevatedButton(
-          child: Text("Ini screen kedua pisah,ada Pesan : $pesan"),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
+      body: Container(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: ElevatedButton(
+            child: Text("Ini screen kedua pisah,ada Pesan : $pesan"),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
         ),
       ),
     );
